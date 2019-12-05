@@ -3,11 +3,11 @@ from typing import List
 
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
-        if matrix.__len__()==0:
+        if matrix.__len__() == 0:
             return []
         direction = [(0, 1), (1, 0), (0, -1), (-1, 0)]
-        border = [0,matrix[0].__len__()-1, matrix.__len__()-1,  0]
-        i, j, d = 0,0,0
+        border = [0, matrix[0].__len__() - 1, matrix.__len__() - 1, 0]
+        i, j, d = 0, 0, 0
         res = []
         while True:
             res.append(matrix[i][j])
@@ -37,8 +37,10 @@ class Solution:
 
 if __name__ == '__main__':
     inp = [
-        [1]
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
     ]
-    s=Solution()
-    re=s.spiralOrder(inp)
+    s = Solution()
+    re = s.spiralOrder(inp)
     print(re)
