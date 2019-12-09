@@ -17,9 +17,14 @@ class Solution:
                 result.append(nums[windowsMax[0]])
         return result
 
+class LenTest():
+    def __len__(self):
+        return 123
 
 if __name__ == '__main__':
     inputs =[1,3,1,2,0,5]
     s = Solution()
     r = s.maxSlidingWindow(inputs, 3)
     print(r)
+    print(len(LenTest()))
+
